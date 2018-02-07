@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png" />
+	<meta charset="utf-8" />
+    <title>Hire Sébastien Branly</title>
+  </head>
+  <body>
+	<script src="script.js"></script>
+	<script id="notification_template" type="text/template">
+		<div class="a_notification {color_class}">
+			<img class="notification_image" src="{image_src}" alt="Notification">
+			<div class="notification_content">{notification_content}</div>
+		</div>
+	</script>
+	<div id="notifications">
+	</div>
+	<div id="exit_intent_modal" class="modal">
+	  <div class="modal_content">
+		<div class="modal_header">
+			<span id="exit_intent_modal_close">&times;</span>
+			<h2>To be done</h2>
+		</div>
+		<div class="modal_body">
+			<p>To be done</p>
+			<p>To be done</p>
+		</div>
+		<div class="modal_footer">
+			<h3>To be done</h3>
+		</div>
+	  </div>
+	</div>
+	<div id="main_header">
+		<div id="left_header">
+			<div id="welcome" class="fake_link">Hi Recruiter!</div>
+			<div>|</div>
+			<div id="daily_deals" class="fake_link">Daily Deals</div>
+			<div>|</div>
+			<div id="gift_cards" class="fake_link">Gift Cards</div>
+			<div>|</div>
+			<div id="help_and_contact"><a href="mailto:sebastianbranly@gmail.com" target="_top" title="">Help & Contact</a></div>
+		</div>
+		<div id="right_header">
+			<div id="sell" class="fake_link">Sell</div>
+			<div>|</div>
+			<div id="my_ebay" class="fake_link">My seBranly</div>
+			<div id="notification_part">
+				<img id="notification_bell" class="header_icon" src="assets/notification-bell.svg.png" alt="Notification bell picture not found">
+				<div id="notification_circle"></div>
+			</div>
+			<img class="header_icon" src="assets/cart.svg.png" alt="Cart picture not found">
+		</div>
+	</div>
+	<div id="sub_body">
+		<div id="secondary_header">
+			<div id="page_title">
+				<div>s</div><div id="e_letter_main_title">e</div><div id="b_letter_main_title">b</div><div>r</div><div id="a_letter_main_title">a</div><div>n</div><div>l</div><div id="y_letter_main_title">y</div>
+			</div>
+			<div id="shop_by" class="fake_link">
+				Shop by
+				category &#9660;
+			</div>
+			<form id="search_form">
+				<input id="category_text_search" type="text" pattern=".{2,}" required value="Ruby on Rails" placeholder="Search for any skills I have (at least 2 characters (e.g. AI))">
+				<select id="categories">
+					<option selected="selected" value="All Skills">All Skills</option>
+				</select>
+				<input id="search_button" type="button" value="Search">
+				<div id="advanced_search"><a href="#" title="Advanced Search">Advanced</a></div>
+			</form>
+		</div>
+		<div id="navigation_header">
+			<img class="navigation_icon" src="assets/left-arrow.png" alt="Left arrow picture not found">
+			<a href="#" title="Click to Go Back to search results">Back to search results</a>
+			<div>| Listed in category: </div>
+			<a href="#" title="">Specialty Services</a>
+			<div>></div>
+			<a href="#" title="">Other Specialty Services</a>
+			<div>></div>
+			<a href="#" title="See more Sébastien Branlys">See more Sébastien Branlys</a>
+		</div>
+		<div id="main_body">
+			<div id="left_body">
+				<img id="main_picture" src="assets/sebranly-pp.png" alt="sebranly picture not found">
+				<div id="thumbs">
+					<img class="current_displayed_picture" src="assets/sebranly-pp.png" alt="sebranly thumb picture 1 not found">
+					<img src="assets/sebranly-pp-1.jpeg" alt="sebranly thumb picture 2 not found">
+					<img src="assets/sebranly-pp-2.JPG" alt="sebranly thumb picture 3 not found">
+				</div>
+				<div id="money_block">
+					<img id="money_icon" src="assets/dollar.png" alt="dollar picture not found">
+					Have money to make as a company?
+					<button id="money_button" type="button">Hire Now</button>
+				</div>
+			</div>
+			<div id="right_body">
+				<div id="main_title">Hire Sébastien Branly FRANCE - Future Software Engineer</div>
+				<div id="main_subtitle">1-Year Quality Warranty Included</div>
+				<div id="trendy_and_ratings_banner">
+					<img id="trendy_icon" src="assets/fire.png" alt="fire picture not found">
+					<div id="trendy_text">1 viewed per month</div>
+					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
+					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
+					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
+					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
+					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
+					<a href="#ratings_and_reviews_body">4 product ratings</a>
+					<div>|</div>
+					<a href="#">Write a review</a>
+				</div>
+				<hr>
+				<div id="left_column_right_body">
+					<div id="availability_and_conditions">
+						<div id="left_availability_and_conditions">
+							<div id="conditions">Item condition: <div id="condition_status">New and motivated</div></div>
+							<div id="quantity">Quantity:<input id="quantity_field" type="number" min="1" value="1"></div>
+						</div>
+						<div id="right_availability_and_conditions">
+							Limited quantity available / this item is unique
+						</div>
+					</div>
+					<div id="price_container">
+						<div id="price">Price: <div id="price_value">US $<div id="price_raw_value">1</div>/month</div></div>
+						<div id="price_buttons_and_links">
+							<button id="hire_button" class="main_button" type="button">Hire Him Now</button>
+							<button id="cart_button" class="main_button" type="button">Add to cart</button>
+							<a href="#" id="watch_list_link"><img class="add_icon" src="assets/eye.svg.png" alt="">Add to watch list</a>
+							<a href="#" id="collection_link"><img class="add_icon" src="assets/star-2.png" alt="">Add to collection</a>
+						</div>
+						<div id="price_container_footer">
+							<div id="main_price_container_footer_element" class="price_container_footer_element">Free delivery in 6-8 weeks</div>
+							<div class="price_container_footer_element">1-2 Years' Experience</div>
+							<div class="price_container_footer_element">Longtime developer</div>
+						</div>
+					</div>
+					<div id="additional_details">
+						<div class="additional_details_block">
+							<div class="left_additional_details_block">
+								Shipping:
+							</div>
+							<div class="right_additional_details_block">
+								<div class="block"><div class="inline bold">FREE</div> Expedited International Shipping</div>
+								<div class="block">See details about international shipping here.</div>
+								<div class="block">Item location: Lille, France</div>
+								<div class="block">Ships to: Worldwide</div>
+							</div>
+						</div>
+						<div class="additional_details_block">
+							<div class="left_additional_details_block">
+								Delivery:
+							</div>
+							<div class="right_additional_details_block">
+								<div class="block">Estimated in <div class="inline bold">Apr. 2018</div></div>
+								<div class="block">Includes international tracking</div>
+								<div class="block">Seller starts J1 Visa Process within 1 day after receiving clear offer</div>
+							</div>
+						</div>
+						<div class="additional_details_block">
+							<div class="left_additional_details_block">
+								Payments:
+							</div>
+							<div class="right_additional_details_block">
+								<div class="block">No J1 visa sponsorship's fees required for the employer.</div>
+								<div class="block">Seller will pay them through CIEE.</div>
+								<div class="block">Only monthly salary required.</div>
+							</div>
+						</div>
+						<div class="additional_details_block">
+							<div class="left_additional_details_block">
+								Returns:
+							</div>
+							<div class="right_additional_details_block">
+								<div class="block">Seller does not like returns. Seller will work hard to satisfy the employer.</div>
+							</div>
+						</div>
+						<div class="additional_details_block">
+							<div class="left_additional_details_block">
+								Guarantee:
+							</div>
+							<div class="right_additional_details_block">
+								<div class="block">1-Year Quality Warranty Included</div>
+								<div class="block">Read <a href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank">item description</a> or <a href="mailto:sebastianbranly@gmail.com" target="_top" title="">contact seller</a> for details.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="right_column_right_body">
+					<div id="social_banner">
+						<a href="mailto:sebastianbranly@gmail.com" target="_top" title=""><img class="social_icon" src="assets/email.png" alt="email picture not found"></a>
+						<a href="https://www.facebook.com/sebranly" target="_blank" title="Visit my Facebook"><img class="social_icon" src="assets/facebook.svg.png" alt="facebook picture not found"></a>
+						<a href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank" title="Visit my Linkedin"><img class="social_icon" src="assets/linkedin.svg" alt="linkedin picture not found"></a>
+						<a href="https://github.com/sebranly" target="_blank" title="Visit my GitHub"><img class="social_icon" src="assets/github.png" alt="github picture not found"></a>
+						<a href="#" title="">Add to watch list</a>
+					</div>
+					<div id="seller_information">
+						<div id="seller_information_title">Seller information</div>
+						<div id="seller_information_subtitle">
+							<a id="seller_information_name" href="#" title="">sebranly</a>
+							<div> (</div>
+							<a href="#" title="">9999</a>
+							<img id="seller_ranking_icon" src="assets/star.svg.png" alt="star picture not found">
+							<div>)</div>
+						</div>
+						<div id="seller_information_feedback">100% Positive feedback</div>
+						<hr class="dotted" />
+						<div id="save_seller">
+							<img id="save_seller_icon" src="assets/heart.png" alt="heart picture not found">
+							<a href="#" title="">Save this seller</a>
+						</div>
+						<a href="#" title="">Contact seller</a>
+						<a href="#" title="">See other items</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="details_body">
+			<div id="details_body_title">More details for this product</div>
+			<div id="details_body_content">
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/la-charlotte.svg');"></div>
+					<div class="position_title">Intern in order to experience corporate life</div>
+					<div class="position_company">La Charlotte</div>
+					<div class="position_durations">may 13 - jun 13 (2 months)</div>
+					<div class="position_location">Landacres, France</div>
+				</div>
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/opale-data.png');"></div>
+					<div class="position_title">Visual Basic .NET developer</div>
+					<div class="position_company">Opale Data - Cemenor</div>
+					<div class="position_durations">apr 14 - jun 14 (3 months)</div>
+					<div class="position_location">Boulogne-Sur-Mer, France</div>
+				</div>
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/thredup.jpg');"></div>
+					<div class="position_title">Full-Stack Engineer</div>
+					<div class="position_company">thredUP</div>
+					<div class="position_durations">apr 15 - jan 16 (9 months)</div>
+					<div class="position_location">San Francisco, California</div>
+				</div>
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/ovh.jpg');"></div>
+					<div class="position_title">Manager of the Recommendation System</div>
+					<div class="position_company">OVH</div>
+					<div class="position_durations">jul 16 - jan 17 (7 months)</div>
+					<div class="position_location">Roubaix, France</div>
+				</div>
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/stylelounge.png');"></div>
+					<div class="position_title">Backend Engineer</div>
+					<div class="position_company">StyleLounge</div>
+					<div class="position_durations">feb 17 - jul 17 (6 months)</div>
+					<div class="position_location">Hamburg, Germany</div>
+				</div>
+				<div class="details_body_content_block">
+					<div class="center_fit" style="background-image: url('assets/ig2i.png');"></div>
+					<div class="position_title">Graduate with a M.S. in CS</div>
+					<div class="position_company">Centrale Lille IG2I</div>
+					<div class="position_durations">sep 12 - jun 17 (5 years)</div>
+					<div class="position_location">Lens, France</div>
+				</div>
+			</div>
+		</div>
+		<div id="ratings_and_reviews_body">
+			<div id="ratings_and_reviews_body_title">Ratings and Reviews</div>
+			<hr class="rating_hr" />
+			<div id="ratings_and_reviews_body_subtitle">
+				<div class="ratings_and_reviews_body_subtitle_child">
+					<div id="average_rating">5</div>
+					<div id="ratings_and_reviews_banner">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<img src="assets/star.svg.png" alt="star picture not found">
+					</div>
+					<div id="ratings_and_reviews_counter">4 product ratings</div>
+				</div>
+				<div class="ratings_and_reviews_body_subtitle_child">
+					<div class="bar_rating_block">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<div class="rating_grade">5</div>
+						<div class="full_bar_rating bar_rating_rectangle"></div>
+						<div class="rating_counter">4</div>
+					</div>
+					<div class="bar_rating_block">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<div class="rating_grade">4</div>
+						<div class="empty_bar_rating bar_rating_rectangle"></div>
+						<div class="rating_counter">0</div>
+					</div>
+					<div class="bar_rating_block">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<div class="rating_grade">3</div>
+						<div class="empty_bar_rating bar_rating_rectangle"></div>
+						<div class="rating_counter">0</div>
+					</div>
+					<div class="bar_rating_block">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<div class="rating_grade">2</div>
+						<div class="empty_bar_rating bar_rating_rectangle"></div>
+						<div class="rating_counter">0</div>
+					</div>
+					<div class="bar_rating_block">
+						<img src="assets/star.svg.png" alt="star picture not found">
+						<div class="rating_grade">1</div>
+						<div class="empty_bar_rating bar_rating_rectangle"></div>
+						<div class="rating_counter">0</div>
+					</div>
+				</div>
+				<div id="ratings_and_reviews_all_circle_charts">
+					<div class="ratings_and_reviews_body_subtitle_child">
+						<div class="ratings_and_reviews_circle_chart">
+							<div class="circle">
+								<div class="sub_circle">
+									100%
+								</div>
+							</div>
+							<div class="ratings_and_review_circle_title">Would recommend</div>
+						</div>
+					</div>
+					<div class="ratings_and_reviews_body_subtitle_child">
+						<div class="ratings_and_reviews_circle_chart">
+							<div class="circle">
+								<div class="sub_circle">
+									100%
+								</div>
+							</div>
+							<div class="ratings_and_review_circle_title">Good value</div>
+						</div>
+					</div>
+					<div class="ratings_and_reviews_body_subtitle_child">
+						<div class="ratings_and_reviews_circle_chart">
+							<div class="circle">
+								<div class="sub_circle">
+									100%
+								</div>
+							</div>
+							<div class="ratings_and_review_circle_title">Good quality</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="rating_hr" />
+			<div id="ratings_and_reviews_body_content">
+				<div id="ratings_and_reviews_body_content_title">Most relevant reviews</div>
+				<div class="ratings_and_reviews_body_content_block">
+					<div class="left_ratings_and_reviews_body_content_block">
+						<div class="single_review_banner">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+						</div>
+						<div class="single_review_author">by <a href="https://www.linkedin.com/in/reasn/en" target="_blank" title="">reasn</a></div>
+						<div class="single_review_date">Nov 04, 2017</div>
+					</div>
+					<div class="right_ratings_and_reviews_body_content_block">
+						<div class="single_review_content">
+							Sébastien worked for us as part of an internship. He was a fast learner and was quickly able to make valuable contributions to our application. He was committed to his work but also looking for ways to improve processes and knowledge sharing in the team. It was a pleasure to work with him and I am sure he will accomplish great things.
+						</div>
+						<div class="single_review_detailed_author">
+							Alexander Thiel, CTO at StyleLounge
+						</div>
+					</div>
+				</div>
+				<div class="ratings_and_reviews_body_content_block">
+					<div class="left_ratings_and_reviews_body_content_block">
+						<div class="single_review_banner">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+						</div>
+						<div class="single_review_author">by <a href="https://www.linkedin.com/in/vitaliy-pasiuta/en" target="_blank" title="">vitaliy-pasiuta</a></div>
+						<div class="single_review_date">Oct 13, 2017</div>
+					</div>
+					<div class="right_ratings_and_reviews_body_content_block">
+						<div class="single_review_content">
+							It was very pleasant to work with Sebastian.
+							He is a very reliable and hardworking guy.
+							I think that Sebi is one of the promising and talented engineers I've ever worked with. Also, he has great communication skills and working with him in one team is soft and smooth ;)
+							Besides a reliable colleague and strong technical developer, I've found a friend.
+							Seb, I wish you only the best and I hope that we can work with each other in the future!
+							Good luck :)
+						</div>
+						<div class="single_review_detailed_author">
+							Vitaliy Pasiuta, Software Engineer at Thomas Cook
+						</div>
+					</div>
+				</div>
+				<div class="ratings_and_reviews_body_content_block">
+					<div class="left_ratings_and_reviews_body_content_block">
+						<div class="single_review_banner">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+						</div>
+						<div class="single_review_author">by <a href="https://www.linkedin.com/in/dandemeyere/en" target="_blank" title="">dandemeyere</a></div>
+						<div class="single_review_date">Oct 13, 2016</div>
+					</div>
+					<div class="right_ratings_and_reviews_body_content_block">
+						<div class="single_review_content">
+							Sébastien is a very competent, hard-working engineer who is able to ramp up quickly to make an impact for the team. His English was great and he was able to work with our other departments (ex: Product) to collaborate on efforts. His intelligence will shine through the quality of his code and he's versatile in the sense that he can work across technical domains with ease.
+						</div>
+						<div class="single_review_detailed_author">
+							Dan DeMeyere, VP Engineering at thredUP.com
+						</div>
+					</div>
+				</div>
+				<div class="ratings_and_reviews_body_content_block">
+					<div class="left_ratings_and_reviews_body_content_block">
+						<div class="single_review_banner">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+							<img src="assets/star.svg.png" alt="star picture not found">
+						</div>
+						<div class="single_review_author">by <a href="https://www.linkedin.com/in/bouquet-rodrigue-89707046/en" target="_blank" title="">bouquet-rodrigue</a></div>
+						<div class="single_review_date">Jun 09, 2016</div>
+					</div>
+					<div class="right_ratings_and_reviews_body_content_block">
+						<div class="single_review_content">
+							Lors de son stage en développement M. Branly a su faire preuve de compétence, de rigueur et de sérieux.
+							Il a appréhendé les contraintes de notre société mais aussi celles des clients lors des phases d’analyse.
+							Le développement et la qualité du travail étaient bien au-delà des attentes.
+							Pour ces raisons, je recommande vivement cette personne
+						</div>
+						<div class="single_review_detailed_author">
+							Bouquet Rodrigue, former Developer at Opale Data
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main_footer">
+			<a href="#main_header" title="">Return to top</a>
+			<div id="copyright_info">This website was made in Feb 2018 by Sébastien Branly for the purpose of a creative job search tool. No copyright infringement intended.</div>
+		</div>
+	</div>
+  </body>
+</html>
