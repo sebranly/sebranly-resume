@@ -21,36 +21,46 @@
 	  <div class="modal_content">
 		<div class="modal_header">
 			<span id="exit_intent_modal_close">&times;</span>
-			<h2>To be done</h2>
+			<h2>Before you leave... :)</h2>
 		</div>
 		<div class="modal_body">
-			<p>To be done</p>
-			<p>To be done</p>
+			<p>If you still want to learn more about me:</p>
+			<p>You can visit my <a href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank">LinkedIn profile</a></p>
+			<p>You can also send me an <a href="mailto:sebastianbranly@gmail.com" target="_top" title="">email</a> (sebastianbranly@gmail.com)</p>
 		</div>
 		<div class="modal_footer">
-			<h3>To be done</h3>
+			<h3>Thank you for your time and consideration!</h3>
 		</div>
 	  </div>
 	</div>
+	<div id="checkout_modal">
+		<div class="checkout_modal_line_content">Click here to <div class="green_text"><strong>check out</strong></div> by</div>
+		<div class="checkout_modal_line_content">sending sebranly an <a href="mailto:sebastianbranly@gmail.com" target="_top" title="">email</a>!</div>
+		<hr>
+		<div class="checkout_modal_line_content"><strong>1x</strong> Sébastien Branly</div>
+	</div>
 	<div id="main_header">
 		<div id="left_header">
-			<div id="welcome" class="fake_link">Hi Recruiter!</div>
+			<div id="welcome" class="fake_menu_link">Hi Recruiter!</div>
 			<div>|</div>
-			<div id="daily_deals" class="fake_link">Daily Deals</div>
+			<div id="daily_deals" class="fake_menu_link">Daily Deals</div>
 			<div>|</div>
-			<div id="gift_cards" class="fake_link">Gift Cards</div>
+			<div id="gift_cards" class="fake_menu_link">Gift Cards</div>
 			<div>|</div>
 			<div id="help_and_contact"><a href="mailto:sebastianbranly@gmail.com" target="_top" title="">Help & Contact</a></div>
 		</div>
 		<div id="right_header">
-			<div id="sell" class="fake_link">Sell</div>
+			<div id="sell" class="fake_menu_link">Sell</div>
 			<div>|</div>
-			<div id="my_ebay" class="fake_link">My seBranly</div>
+			<div id="my_ebay" class="fake_menu_link">My seBranly</div>
 			<div id="notification_part">
 				<img id="notification_bell" class="header_icon" src="assets/notification-bell.svg.png" alt="Notification bell picture not found">
-				<div id="notification_circle"></div>
+				<div id="notification_circle" class="indicator_circle"></div>
 			</div>
-			<img class="header_icon" src="assets/cart.svg.png" alt="Cart picture not found">
+			<div id="cart_part">
+				<img id="cart" class="header_icon" src="assets/cart.svg.png" alt="Cart picture not found">
+				<div id="cart_circle" class="indicator_circle"></div>
+			</div>
 		</div>
 	</div>
 	<div id="sub_body">
@@ -58,12 +68,12 @@
 			<div id="page_title">
 				<div>s</div><div id="e_letter_main_title">e</div><div id="b_letter_main_title">b</div><div>r</div><div id="a_letter_main_title">a</div><div>n</div><div>l</div><div id="y_letter_main_title">y</div>
 			</div>
-			<div id="shop_by" class="fake_link">
+			<div id="shop_by" class="fake_menu_link">
 				Shop by
 				category &#9660;
 			</div>
 			<form id="search_form">
-				<input id="category_text_search" type="text" pattern=".{2,}" required value="Ruby on Rails" placeholder="Search for any skills I have (at least 2 characters (e.g. AI))">
+				<input id="category_text_search" type="text" pattern=".{2,}" required value="" placeholder="Search for any skills I have (at least 2 characters (e.g. AI))">
 				<select id="categories">
 					<option selected="selected" value="All Skills">All Skills</option>
 				</select>
@@ -79,7 +89,7 @@
 			<div>></div>
 			<a href="#" title="">Other Specialty Services</a>
 			<div>></div>
-			<a href="#" title="See more Sébastien Branlys">See more Sébastien Branlys</a>
+			<a href="#" id="more_items" title="See more Sébastien Branlys">See more Sébastien Branlys</a>
 		</div>
 		<div id="main_body">
 			<div id="left_body">
@@ -108,7 +118,7 @@
 					<img class="star_icon" src="assets/star.svg.png" alt="star picture not found">
 					<a href="#ratings_and_reviews_body">4 product ratings</a>
 					<div>|</div>
-					<a href="#">Write a review</a>
+					<a href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank">Write a review</a>
 				</div>
 				<hr>
 				<div id="left_column_right_body">
@@ -126,8 +136,8 @@
 						<div id="price_buttons_and_links">
 							<button id="hire_button" class="main_button" type="button">Hire Him Now</button>
 							<button id="cart_button" class="main_button" type="button">Add to cart</button>
-							<a href="#" id="watch_list_link"><img class="add_icon" src="assets/eye.svg.png" alt="">Add to watch list</a>
-							<a href="#" id="collection_link"><img class="add_icon" src="assets/star-2.png" alt="">Add to collection</a>
+							<div id="watch_list_link" class="fake_link"><img class="add_icon" src="assets/eye.svg.png" alt=""><div id="watch_list_link_text">Add to watch list</div></div>
+							<div id="collection_link" class="fake_link"><img class="add_icon" src="assets/star-2.png" alt=""><div id="collection_link_text">Add to collection</div></div>
 						</div>
 						<div id="price_container_footer">
 							<div id="main_price_container_footer_element" class="price_container_footer_element">Free delivery in 6-8 weeks</div>
@@ -188,29 +198,30 @@
 				</div>
 				<div id="right_column_right_body">
 					<div id="social_banner">
-						<a href="mailto:sebastianbranly@gmail.com" target="_top" title=""><img class="social_icon" src="assets/email.png" alt="email picture not found"></a>
+						<a id="mail_icon" href="mailto:sebastianbranly@gmail.com" target="_top" title=""><img class="social_icon" src="assets/email.png" alt="email picture not found"></a>
 						<a href="https://www.facebook.com/sebranly" target="_blank" title="Visit my Facebook"><img class="social_icon" src="assets/facebook.svg.png" alt="facebook picture not found"></a>
 						<a href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank" title="Visit my Linkedin"><img class="social_icon" src="assets/linkedin.svg" alt="linkedin picture not found"></a>
 						<a href="https://github.com/sebranly" target="_blank" title="Visit my GitHub"><img class="social_icon" src="assets/github.png" alt="github picture not found"></a>
-						<a href="#" title="">Add to watch list</a>
+						<div id="social_banner_add_to_watch_list" class="fake_link">Add to watch list</div>
 					</div>
+					<div id="mail">sebastianbranly@gmail.com</div>
 					<div id="seller_information">
 						<div id="seller_information_title">Seller information</div>
 						<div id="seller_information_subtitle">
-							<a id="seller_information_name" href="#" title="">sebranly</a>
+							<a id="seller_information_name" href="https://www.linkedin.com/in/sebastienbranly/en" target="_blank">sebranly</a>
 							<div> (</div>
-							<a href="#" title="">9999</a>
+							<div class="fake_link">9999</div>
 							<img id="seller_ranking_icon" src="assets/star.svg.png" alt="star picture not found">
 							<div>)</div>
 						</div>
 						<div id="seller_information_feedback">100% Positive feedback</div>
 						<hr class="dotted" />
-						<div id="save_seller">
+						<div id="save_seller" class="fake_link">
 							<img id="save_seller_icon" src="assets/heart.png" alt="heart picture not found">
-							<a href="#" title="">Save this seller</a>
+							<div id="save_seller_text">Save this seller</div>
 						</div>
-						<a href="#" title="">Contact seller</a>
-						<a href="#" title="">See other items</a>
+						<a href="mailto:sebastianbranly@gmail.com" target="_top" title="">Contact seller</a>
+						<div class="fake_link">See other items</div>
 					</div>
 				</div>
 			</div>
@@ -441,6 +452,7 @@
 		</div>
 		<div id="main_footer">
 			<a href="#main_header" title="">Return to top</a>
+			<p>sebastianbranly@gmail.com</p>
 			<div id="copyright_info">This website was made in Feb 2018 by Sébastien Branly for the purpose of a creative job search tool. No copyright infringement intended.</div>
 		</div>
 	</div>

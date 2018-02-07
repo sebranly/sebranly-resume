@@ -67,6 +67,30 @@ function notificationBellHit() {
 	}
 }
 
+function cartHit() {
+	var cartCookie = getCookie("added-to-cart");
+	if (cartCookie == "1") {
+		$("#checkout_modal").toggle();
+	}
+}
+
+function addToCart() {
+	var cartCookie = getCookie("added-to-cart");
+	if (cartCookie == "0") {
+		setCookie("added-to-cart", 1, 1);
+		$("#cart_button").html("Added to cart!");
+		$("#cart_button").css("background-color", "grey");
+		document.getElementById("cart_circle").style.display = "inline-block";
+		$("#checkout_modal").show();
+	}
+}
+
+function updateWatchlistCopy() {
+	var newCopy = "Added to watch list!";
+	$("#social_banner_add_to_watch_list").html(newCopy);
+	$("#watch_list_link_text").html(newCopy);
+}
+
 function escapeRegExp(string){
 	return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
@@ -114,11 +138,12 @@ $(document).ready(function() {
 		$("#trendy_text").html(number + " " + text);
 	}, 900);
 	
-	setTimeout(function () { createNotification("assets/notification-bell.svg.png", "blue", "To be done") }, 10000);
+	setTimeout(function () { createNotification("assets/smiley.svg.png", "blue", "I see you like your visit here, don't you? If you have an open position that would fit me, please make sure to contact me: I'd love to talk to you!") }, 120000);
 	
 	setCookie("exit-intent", 0, 365);
+	setCookie("added-to-cart", 0, 365);
 	var modal = document.getElementById("exit_intent_modal");
-	createNotification("assets/notification-bell.svg.png", "blue", "To be done");
+	createNotification("assets/smiley.svg.png", "blue", "Welcome to my interactive résumé! Make sure to click wherever you want in order to learn more about me and to then contact me. You can also look for my skills thanks to the search bar at the top. Have fun!");
 
 	$("#thumbs *").hover(function() {
 		$("#main_picture").attr("src", $(this).attr("src"));
@@ -132,7 +157,7 @@ $(document).ready(function() {
 		$(this).addClass("current_displayed_picture");
 	});
 	
-	$(".fake_link").hover(function() {
+	$(".fake_menu_link").hover(function() {
 		$(this).css("color", "rgb(6, 84, 205)");
 		$(this).css("cursor", "pointer");
 	}, function() {
@@ -140,13 +165,36 @@ $(document).ready(function() {
 		$(this).css("cursor", "auto");
 	});
 	
+	$(".fake_link").hover(function() {
+		$(this).css("cursor", "pointer");
+	}, function() {
+		$(this).css("cursor", "auto");
+	});
+	
+	$("#save_seller").click(function() {
+		$("#save_seller_text").html("Saved!");
+	});
+	
+	$("#collection_link").click(function() {
+		$("#collection_link_text").html("Added to collection!");
+	});
+	
+	$("#watch_list_link").click(updateWatchlistCopy);
+	$("#social_banner_add_to_watch_list").click(updateWatchlistCopy);
+	
 	$("#notification_bell").hover(function() {
 		$(this).css("cursor", "pointer");
 	}, function() {
 		$(this).css("cursor", "auto");
 	});
 	
-	$("#notification_circle").hover(function() {
+	$("#cart").hover(function() {
+		$(this).css("cursor", "pointer");
+	}, function() {
+		$(this).css("cursor", "auto");
+	});
+	
+	$(".indicator_circle").hover(function() {
 		$(this).css("cursor", "pointer");
 	}, function() {
 		$(this).css("cursor", "auto");
@@ -177,6 +225,20 @@ $(document).ready(function() {
 	
 	$("#notification_bell").click(notificationBellHit);
 	$("#notification_circle").click(notificationBellHit);
+	
+	$("#cart").click(cartHit);
+	$("#cart_circle").click(cartHit);
+	
+	$("#my_ebay").click(function() {
+		createNotification("assets/smiley.svg.png", "blue", "You want your own sebranly? That's awesome, make sure to add him to your cart then!");
+	});
+	
+	$("#category_text_search").keypress(function (e) {
+		if (e.which == 13) {
+			$("#search_button").click();
+			return false;
+		}
+	});
 	
 	$("#search_button").click(function() {
 		var successText = "That's a match! I do have the following skill(s)";
@@ -241,6 +303,18 @@ $(document).ready(function() {
 		createNotification("assets/alert.png", "orange", "This item is unique, you can't order more than one Sébastien Branly");
 		$("#quantity_field").val("1");
 	});
+	
+	$("#more_items").click(function() {
+		createNotification("assets/alert.png", "orange", "Oops - this is the only sebranly item we have in stock actually!");
+	});
+	
+	$("#mail_icon").hover(function() {
+		document.getElementById("mail").style.display = "inline-block";
+	});
+	
+	$("#cart_button").click(addToCart);
+	$("#hire_button").click(addToCart);
+	$("#money_button").click(addToCart);
 	
 	$(window).click(function(event) {
 		if (event.target == modal) {

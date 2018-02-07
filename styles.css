@@ -52,6 +52,28 @@ body {
 	display: inline-block;
 }
 
+#checkout_modal {
+	position: absolute;
+	border: 2px solid black;
+	box-shadow: 3px 3px grey;
+	top: 50px;
+	right: 10px;
+	background-color: white;
+	padding: 20px 20px 20px 20px;
+	display: none;
+}
+
+.checkout_modal_line_content {
+	display: block;
+	text-align: left;
+	padding: 0px 0px 0px 0px;
+	font-size: 14px;
+}
+
+.checkout_modal_line_content * {
+	display: inline-block;
+}
+
 #main_header {
 	background-color: white;
 	padding: 15px;
@@ -100,7 +122,25 @@ body {
 	text-align: center;
 }
 
+#cart_circle {
+	display: none;
+	position: absolute;
+	right: 0px;
+	float: none;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: green;
+	line-height: 13px;
+	text-align: center;
+}
+
 #notification_part {
+	position: relative;
+}
+
+#cart_part {
 	position: relative;
 }
 
@@ -171,7 +211,7 @@ body {
 	width: 160px;
 	color: #333;
 	font: 12px Arial;
-	height: 50px;
+	height: 45px;
 	margin: 0px;
 	border-radius: 1px 5px 5px 1px;
 }
@@ -617,7 +657,7 @@ body {
 	width: 100%;
 	border: 1px solid grey;
 	background-color: white;
-	padding: 30px;
+	padding: 10px;
 	font-size: 16px;
 }
 
@@ -870,6 +910,14 @@ body {
 	color: grey;
 }
 
+#collection_link * {
+	display: inline-block;
+}
+
+#watch_list_link * {
+	display: inline-block;
+}
+
 .green {
 	background-color: rgb(34, 177, 76);
 }
@@ -880,4 +928,20 @@ body {
 
 .blue {
 	background-color: rgb(59, 159, 207);
+}
+
+.fake_link {
+	color: rgb(6, 84, 205);
+}
+
+#mail {
+	display: none;
+	text-align: right;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	width: 100%;
+}
+
+.green_text {
+	color: green;
 }
